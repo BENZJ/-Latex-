@@ -1,0 +1,29 @@
+
+% !Mode:: "TeX:UTF-8"
+% !TEX program = LATEXMK
+\documentclass[]{my}
+
+% \usepackage{geometry}
+
+% \geometry{a4paper,left=2cm,right=2cm,top=2.54cm,bottom=2.54cm}
+\begin{document}
+% \let\songti\relax
+% \begin{CJK}{UTF8}{gbsn}
+    \zihao{-5}\heiti{中图法分类号}:\zihao{-5}\songti{(此号在中国图书馆分类法中查)}  \zihao{-5}\heiti{文献标识码}:\zihao{-5}\songti{A}   \zihao{-5}\heiti{文章编号}:\zihao{-5}\songti{1006-8961(年) -}
+
+    \begin{center}
+        \zihao{2}\songti {融合深度模型和传统模型的显著性检测}
+    \end{center}
+
+    \begin{cabstract}
+        显著性检测是图像和视觉领域一个基础问题，传统模型对于显著性物体的边界保留较好，但是对显著性目标的自信度不够高，召回率低，而深度学习模型对于显著性物体的自信度高，但是其结果边界粗糙，准确率较低。针对这两种模型各自的优缺点，提出了一种显著性模型以综合利用两种方法的优点并抑制各自的不足。方法 首先改进最新的密集卷积网络，训练了一个基于该网络的全卷积网络（FCN）显著性模型，同时选取一个现有的基于超像素的显著性回归模型，在得到两种模型的显著性结果图后，提出一种融合算法，融合两种方法的结果以得到最终优化结果，该算法通过显著性结果Hadamard积和像素间显著性值的一对一非线性映射，将FCN结果与传统模型的结果相融合。结果 实验在4个数据集上与最新的10种方法进行了比较，在HKU-IS数据集中，相比于性能第2的模型，F值提高了2.6\%；在MSRA数据集中，相比于性能第2的模型，F值提高了2.2\%，MAE降低了5.6\%；在DUT-OMRON数据集中，相比于性能第2的模型，F值提高了5.6\%，MAE降低了17.4\%。同时也在MSRA数据集中进行了对比实验以验证融合算法的有效性，对比实验结果证明提出的融合算法改善了显著性检测的效果。结论 本文所提出的显著性模型，综合了传统模型和深度学习模型的优点，使显著性检测结果更加准确。
+    \end{cabstract}
+
+
+    \begin{ckeywords}
+        显著性检测；密集卷积网络；全卷积网络；融合算法；Hadamard积
+    \end{ckeywords}   
+    
+    
+% \end{CJK}
+\end{document}
