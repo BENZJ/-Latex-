@@ -26,6 +26,29 @@
 \RequirePackage{geometry}
 \geometry{a4paper,left=2cm,right=2cm,top=2.54cm,bottom=2.54cm}
 
+
+\def\ps@Firstpage{%
+	\let\@oddhead\@empty%
+	\let\@evenhead\@empty%
+	\def\@oddfoot{
+        \leftline{
+            \parbox{180cm}{\noindent\zihao{-5}\heiti{收稿日期}：2000-06-30；\zihao{-5}\heiti{修回日期}：2000-11-16\\ 
+            \noindent\zihao{-5}\heiti{基金项目}：``九五''国家科技攻关资助项目(96-B02-03-05)\\ 
+            \noindent\zihao{-5}\textbf{Supported by}：}
+        }
+        % \leftline{
+        % \noindent\zihao{-5}\noindent \textbf{收稿日期}：2000-06-30；\textbf{修回日期}：2000-11-16
+        
+        % }
+        % \leftline{
+        %     \noindent\textbf{基金项目}：``九五''国家科技攻关资助项目(96-B02-03-05)
+        % }
+        }%
+	\let\@evenfoot=\@oddfoot}
+
+    
+\pagestyle{Firstpage}
+
 %中文摘要
 \newenvironment{cabstract}{%
 \noindent\zihao{-5}\heiti{摘 \spaceChar \spaceChar 要：}\zihao{-5}\songti }{}
